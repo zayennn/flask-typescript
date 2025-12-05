@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask
+from blueprints.home.routes import home_bp
+from blueprints.dashboard.routes import dashboard_bp
 
 app = Flask(__name__)
 
-@app.route('/')
-def index() :
-    return render_template('index.html')
+app.register_blueprint(home_bp)
+app.register_blueprint(dashboard_bp)
