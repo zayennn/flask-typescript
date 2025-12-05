@@ -1,5 +1,11 @@
-const increaseBtn = document.querySelector('.increase')
+document.addEventListener('DOMContentLoaded', function() {
+    const spanNumber = document.querySelector('.number') as HTMLSpanElement;
+    let number: number = Number(spanNumber?.textContent) || 0;
 
-increaseBtn?.addEventListener('click', function() {
-    console.log('click!')
-})
+    const increaseBtn = document.querySelector('.increase') as HTMLButtonElement;
+
+    increaseBtn.addEventListener('click', function() {
+        number++;
+        spanNumber.textContent = number.toString();
+    });
+});
