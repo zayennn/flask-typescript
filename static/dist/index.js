@@ -1,7 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const greeting = (name) => {
-    console.log(`hello ${name}`);
-};
-greeting('masbro');
+const increaseBtn = document.querySelector('.increase');
+increaseBtn?.addEventListener('click', function () {
+    console.log('click!');
+});
+export {};
 //# sourceMappingURL=index.js.map

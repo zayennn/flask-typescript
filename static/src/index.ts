@@ -1,5 +1,5 @@
-const greeting = (name: string) => {
-    console.log(`hello ${name}`)
-}
+const increaseBtn = document.querySelector('.increase')
 
-greeting('masbro')
+increaseBtn?.addEventListener('click', function() {
+    console.log('click!')
+})
