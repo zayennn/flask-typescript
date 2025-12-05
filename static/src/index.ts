@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const spanNumber = document.querySelector('.number') as HTMLSpanElement;
-    let number: number = Number(spanNumber?.textContent) || 0;
+    const navbar: any = document.querySelector('.navbar__container')
 
-    const increaseBtn = document.querySelector('.increase') as HTMLButtonElement;
-
-    increaseBtn.addEventListener('click', function() {
-        number++;
-        spanNumber.textContent = number.toString();
-    });
+    window.addEventListener('scroll', function() {
+        if ( window.scrollY > 200 ) {
+            console.log('scroll');
+            navbar?.classList.add('active')
+        } else {
+            navbar?.classList.remove('active')
+        }
+    })
 });

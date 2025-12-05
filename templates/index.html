@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preload" href="{{ url_for('static', filename='style/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    </noscript>
 </head>
-<body>
-    
-    <h1>
-        count number : <span class="number">0</span>
-    </h1>
 
-    <button class="increase">increase number</button>
+<body>
+
+    <div class="navbar__container">
+        <a href="#" class="brand">
+            Our<span>Movie.</span>
+        </a>
+
+        <nav class="nav__menu">
+            <ul>
+                <li><a href="#" class="nav__link">home</a></li>
+                <li><a href="#" class="nav__link">trendings</a></li>
+                <li><a href="#" class="nav__link">popular</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <script type="module" src="{{ url_for('static', filename='dist/index.js') }}"></script>
 </body>
+
 </html>
